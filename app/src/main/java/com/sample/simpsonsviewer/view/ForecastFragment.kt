@@ -18,7 +18,6 @@ import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 import com.sample.simpsonsviewer.SimpsonModel.SimpsonsData
 import com.sample.simpsonsviewer.adapter.CharacterAdapter
 import com.sample.simpsonsviewer.databinding.FragmentForecastBinding
-import com.sample.simpsonsviewer.model.ForecastData
 import com.sample.simpsonsviewer.util.ApiState
 import com.sample.simpsonsviewer.util.parseName
 import com.sample.simpsonsviewer.viewmodel.CharacterViewModel
@@ -33,7 +32,6 @@ class ForecastFragment : Fragment() {
     private lateinit var cAdapter: CharacterAdapter
 
     //private val args: ForecastFragmentArgs by navArgs()
-    private lateinit var wData: ForecastData
     private lateinit var simpData: SimpsonsData
     private val characterViewModel by activityViewModels<CharacterViewModel>()
     //private var characterSearchView: SearchView = null

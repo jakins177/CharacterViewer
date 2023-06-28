@@ -7,18 +7,18 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.sample.simpsonsviewer.R
+import com.sample.simpsonsviewer.databinding.FragmentForecastDetailBinding
+
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 //import com.example.simpsonsviewer.databinding.FragmentForecastDetailBinding
-import com.sample.simpsonsviewer.model.ForecastDetails
 import com.sample.simpsonsviewer.util.parseName
-import com.sample.simpsonsviewer.databinding.FragmentForecastDetailBinding
+
 
 class ForecastDetailFragment : Fragment() {
     private val TAG = "ForecastDetailFragment"
     private var _binding: FragmentForecastDetailBinding? = null
     private val binding get() = _binding!!
     private val args: com.sample.simpsonsviewer.view.ForecastDetailFragmentArgs by navArgs()
-    private lateinit var fDetail: ForecastDetails
     private lateinit var cDetail: RelatedTopic
 
     override fun onCreateView(

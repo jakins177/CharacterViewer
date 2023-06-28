@@ -23,7 +23,7 @@ object RetrofitInstance {
         .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
         .build()
 
-    val weatherService: WeatherService by lazy { retrofit.create(WeatherService::class.java) }
+
     val characterService: CharacterService by lazy { retrofit.create(CharacterService::class.java)}
 
 

@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
-import com.sample.simpsonsviewer.viewmodel.WeatherViewModel
+
 import com.sample.simpsonsviewer.databinding.FragmentCitylookupBinding
 
 class CityLookupFragment : Fragment() {
     private val TAG = "CityLookupFragment"
     private var _binding: FragmentCitylookupBinding? = null
     private val binding get() = _binding!!
-    private val weatherViewModel by activityViewModels<WeatherViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,22 +36,6 @@ class CityLookupFragment : Fragment() {
 
     }.root
 
-//    private fun setupObservers() = with(weatherViewModel) {
-//        weatherState.observe(viewLifecycleOwner) { state ->
-//
-//            if (state is ApiState.Success) {
-//
-//                val wData = state.data;
-//
-//
-//                val directions =
-//                    CityLookupFragmentDirections.actionCityLookupFragmentToForecastFragment(wData)
-//                view?.findNavController()?.navigate(directions)
-//
-//            }
-
-
- //       }
 
     }
 
