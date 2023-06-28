@@ -13,11 +13,11 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.example.simpsonsviewer.R
+import com.sample.simpsonsviewer.R
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 import com.sample.simpsonsviewer.SimpsonModel.SimpsonsData
 import com.sample.simpsonsviewer.adapter.CharacterAdapter
-import com.example.simpsonsviewer.databinding.FragmentForecastBinding
+import com.sample.simpsonsviewer.databinding.FragmentForecastBinding
 import com.sample.simpsonsviewer.model.ForecastData
 import com.sample.simpsonsviewer.util.ApiState
 import com.sample.simpsonsviewer.util.parseName

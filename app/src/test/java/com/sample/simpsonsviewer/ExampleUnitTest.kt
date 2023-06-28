@@ -1,4 +1,4 @@
-package com.example.simpsonsviewer
+package com.sample.simpsonsviewer
 
 import org.junit.Test
 

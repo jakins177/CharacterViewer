@@ -1,4 +1,4 @@
-package com.example.simpsonsviewer
+package com.sample.simpsonsviewer
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

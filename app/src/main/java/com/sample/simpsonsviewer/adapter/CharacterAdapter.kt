@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.simpsonsviewer.R
+import com.sample.simpsonsviewer.R
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 import com.sample.simpsonsviewer.util.parseName
 

@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.example.simpsonsviewer.R
+import com.sample.simpsonsviewer.R
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 //import com.example.simpsonsviewer.databinding.FragmentForecastDetailBinding
 import com.sample.simpsonsviewer.model.ForecastDetails
 import com.sample.simpsonsviewer.util.parseName
-import com.example.simpsonsviewer.databinding.FragmentForecastDetailBinding
+import com.sample.simpsonsviewer.databinding.FragmentForecastDetailBinding
 
 class ForecastDetailFragment : Fragment() {
     private val TAG = "ForecastDetailFragment"

@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.sample.simpsonsviewer.viewmodel.WeatherViewModel
-import com.example.simpsonsviewer.databinding.FragmentCitylookupBinding
+import com.sample.simpsonsviewer.databinding.FragmentCitylookupBinding
 
 class CityLookupFragment : Fragment() {
     private val TAG = "CityLookupFragment"
