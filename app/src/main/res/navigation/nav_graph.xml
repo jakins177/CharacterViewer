@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cityLookupFragment"
-        android:name="com.example.weatherexercise.view.CityLookupFragment"
+        android:name="com.sample.simpsonsviewer.view.CityLookupFragment"
         android:label="CityLookupFragment"
         tools:layout="@layout/fragment_citylookup"
         >
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/forecastFragment"
-        android:name="com.example.weatherexercise.view.ForecastFragment"
+        android:name="com.sample.simpsonsviewer.view.ForecastFragment"
         android:label="ForecastFragment"
         tools:layout="@layout/fragment_forecast"
         >
@@ -30,12 +30,12 @@
     </fragment>
     <fragment
         android:id="@+id/forecastDetailFragment"
-        android:name="com.example.weatherexercise.view.ForecastDetailFragment"
+        android:name="com.sample.simpsonsviewer.view.ForecastDetailFragment"
         android:label="ForecastDetailFragment"
         tools:layout="@layout/fragment_forecast_detail"
         >
         <argument
             android:name="cDetail"
-            app:argType="com.example.weatherexercise.SimpsonModel.RelatedTopic" />
+            app:argType="com.sample.simpsonsviewer.SimpsonModel.RelatedTopic" />
     </fragment>
 </navigation>
