@@ -5,21 +5,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 
-import com.sample.simpsonsviewer.databinding.FragmentCitylookupBinding
+import com.sample.simpsonsviewer.databinding.FragmentHomeBinding
 
-class CityLookupFragment : Fragment() {
-    private val TAG = "CityLookupFragment"
-    private var _binding: FragmentCitylookupBinding? = null
+class HomeFragment : Fragment() {
+    private val TAG = "HomeFragment"
+    private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = FragmentCitylookupBinding.inflate(layoutInflater, container, false).also {
+    ) = FragmentHomeBinding.inflate(layoutInflater, container, false).also {
         _binding = it
       //  setupObservers()
 
@@ -28,7 +27,7 @@ class CityLookupFragment : Fragment() {
             Log.i(TAG, "onCreateView: lookupbutton clicked")
 
             val directions =
-                com.sample.simpsonsviewer.view.CityLookupFragmentDirections.actionCityLookupFragmentToForecastFragment()
+                com.sample.simpsonsviewer.view.HomeFragmentDirections.actionHomeFragmentToCharacterListFragment()
             view?.findNavController()?.navigate(directions)
 
         }

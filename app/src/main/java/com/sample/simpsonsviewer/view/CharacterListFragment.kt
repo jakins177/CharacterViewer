@@ -17,16 +17,16 @@ import com.sample.simpsonsviewer.R
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 import com.sample.simpsonsviewer.SimpsonModel.SimpsonsData
 import com.sample.simpsonsviewer.adapter.CharacterAdapter
-import com.sample.simpsonsviewer.databinding.FragmentForecastBinding
+import com.sample.simpsonsviewer.databinding.FragmentCharacterListBinding
 import com.sample.simpsonsviewer.util.ApiState
 import com.sample.simpsonsviewer.util.parseName
 import com.sample.simpsonsviewer.viewmodel.CharacterViewModel
 import java.util.*
 
 
-class ForecastFragment : Fragment() {
-    private val TAG = "ForecastFragment"
-    private var _binding: FragmentForecastBinding? = null
+class CharacterListFragment : Fragment() {
+    private val TAG = "CharacterListFragment"
+    private var _binding: FragmentCharacterListBinding? = null
     private val binding get() = _binding!!
     private lateinit var cList: List<RelatedTopic>
     private lateinit var cAdapter: CharacterAdapter
@@ -40,7 +40,7 @@ class ForecastFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = FragmentForecastBinding.inflate(layoutInflater, container, false).also {
+    ) = FragmentCharacterListBinding.inflate(layoutInflater, container, false).also {
         _binding = it
 
 //        cAdapter = CharacterAdapter(mList)
@@ -86,7 +86,7 @@ class ForecastFragment : Fragment() {
             } else {
                 Log.i(TAG, "initViews: THIS IS A PHONE")
                 val directions =
-                    com.sample.simpsonsviewer.view.ForecastFragmentDirections.actionForecastFragmentToForecastDetailFragment(
+                    com.sample.simpsonsviewer.view.CharacterListFragmentDirections.actionCharacterListFragmentToCharacterDetailFragment(
                         item
                     )
                 view?.findNavController()?.navigate(directions)

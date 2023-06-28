@@ -7,25 +7,25 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.sample.simpsonsviewer.R
-import com.sample.simpsonsviewer.databinding.FragmentForecastDetailBinding
+import com.sample.simpsonsviewer.databinding.FragmentCharacterDetailBinding
 
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 //import com.example.simpsonsviewer.databinding.FragmentForecastDetailBinding
 import com.sample.simpsonsviewer.util.parseName
 
 
-class ForecastDetailFragment : Fragment() {
-    private val TAG = "ForecastDetailFragment"
-    private var _binding: FragmentForecastDetailBinding? = null
+class CharacterDetailFragment : Fragment() {
+    private val TAG = "CharacterDetailFragment"
+    private var _binding: FragmentCharacterDetailBinding? = null
     private val binding get() = _binding!!
-    private val args: com.sample.simpsonsviewer.view.ForecastDetailFragmentArgs by navArgs()
+    private val args: com.sample.simpsonsviewer.view.CharacterDetailFragmentArgs by navArgs()
     private lateinit var cDetail: RelatedTopic
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = FragmentForecastDetailBinding.inflate(layoutInflater, container, false).also {
+    ) = FragmentCharacterDetailBinding.inflate(layoutInflater, container, false).also {
         _binding = it
 
         cDetail = args.cDetail
@@ -36,15 +36,6 @@ class ForecastDetailFragment : Fragment() {
 
     private fun initViews() = with(binding) {
 
-//        if (fDetail != null && fDetail.weather != null) {
-//
-//            var weather: Weather = fDetail.weather!![0]
-//
-//            binding.feelsLikeTextView.text = "Feels like ${fDetail.main?.feelsLike.toString()}"
-//            binding.tempTextView.text = fDetail.main?.temp.toString()
-//            binding.weatherDescTextView.text = weather.description.toString()
-//            binding.weatherTextView.text = weather.main.toString()
-//        }
 
         if (cDetail != null) {
             binding.weatherDescTextView.text = cDetail.Text.toString()
