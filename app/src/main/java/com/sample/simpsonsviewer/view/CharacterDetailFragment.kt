@@ -38,8 +38,8 @@ class CharacterDetailFragment : Fragment() {
 
 
         if (cDetail != null) {
-            binding.weatherDescTextView.text = cDetail.Text.toString()
-            binding.feelsLikeTextView.text = parseName(cDetail.Text.toString())
+            binding.characterDescriptTextView?.text = cDetail.Text.toString()
+            binding.characterTitleTextView.text = parseName(cDetail.Text.toString())
             val imageUrl = cDetail.Icon.URL
             if (imageUrl != null && imageUrl.isNotEmpty()) {
                 val completeImageUrl  = "https://duckduckgo.com$imageUrl"

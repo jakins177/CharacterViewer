@@ -22,7 +22,7 @@ class CharacterAdapter (
         viewType: Int
     ): CharacterViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.forecast_row_item, viewGroup, false)
+            .inflate(R.layout.character_row_item, viewGroup, false)
 
         return CharacterViewHolder(view)
     }

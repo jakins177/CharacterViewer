@@ -6,17 +6,10 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitInstance {
 
-   // private const val BASE_URL = "https://api.openweathermap.org"
-
     private const val BASE_URL = "https://api.duckduckgo.com"
     private val moshi = Moshi.Builder()
    //     .add(KotlinJsonAdapterFactory())
         .build()
-
-//    private val retrofit = Retrofit.Builder()
-//        .baseUrl("")
-//        .addConverterFactory(MoshiConverterFactory.create(moshi))
-//        .build()
 
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
