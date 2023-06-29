@@ -9,5 +9,9 @@ import retrofit2.http.Url
 
 interface CharacterService {
     @GET
-    suspend fun getCharactersByShow(@Url url:String, @Query ("q", encoded = true) requestQuery:String, @Query ("format") requestFormat:String): Response<SimpsonsData>
+    suspend fun getCharactersByShow(
+        @Url url: String,
+        @Query("q", encoded = true) requestQuery: String,
+        @Query("format") requestFormat: String
+    ): Response<SimpsonsData>
 }

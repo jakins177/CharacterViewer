@@ -33,7 +33,6 @@ class CharacterDetailFragment : Fragment() {
 
     }.root
 
-
     private fun initViews() = with(binding) {
 
 
@@ -42,7 +41,7 @@ class CharacterDetailFragment : Fragment() {
             binding.characterTitleTextView.text = parseName(cDetail.Text.toString())
             val imageUrl = cDetail.Icon.URL
             if (imageUrl != null && imageUrl.isNotEmpty()) {
-                val completeImageUrl  = "https://duckduckgo.com$imageUrl"
+                val completeImageUrl = "https://duckduckgo.com$imageUrl"
 
                 Glide.with(requireContext())
                     .load(completeImageUrl)
@@ -54,10 +53,8 @@ class CharacterDetailFragment : Fragment() {
                 binding.characterImageView.setImageResource(R.drawable.place_holder)
             }
 
-
         }
 
     }
-
 
 }

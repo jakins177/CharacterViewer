@@ -10,12 +10,12 @@ import com.sample.simpsonsviewer.R
 import com.sample.simpsonsviewer.SimpsonModel.RelatedTopic
 import com.sample.simpsonsviewer.util.parseName
 
-class CharacterAdapter (
+class CharacterAdapter(
 
     private var dataSet:
-            List<RelatedTopic>? = mutableListOf(),
+    List<RelatedTopic>? = mutableListOf(),
     private val listener: (RelatedTopic) -> Unit
-    ):
+) :
     RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
     override fun onCreateViewHolder(
         viewGroup: ViewGroup,
@@ -34,10 +34,9 @@ class CharacterAdapter (
         private var conTextView: TextView = itemView.findViewById(R.id.name_textview)
 
         fun updateInfo(item: RelatedTopic?) {
-            if(item != null ) {
-                Log.i("updateInfo", "updateInfo: ")
+            if (item != null) {
 
-                var name:String = parseName(item.Text.toString());
+                var name: String = parseName(item.Text.toString());
 
                 conTextView.text = name
             }
@@ -45,7 +44,7 @@ class CharacterAdapter (
     }
 
     fun setFilteredList(cList: List<RelatedTopic>) {
-         this.dataSet = cList
+        this.dataSet = cList
         notifyDataSetChanged()
 
     }
@@ -55,12 +54,10 @@ class CharacterAdapter (
         holder.updateInfo(item)
 
         holder.itemView.setOnClickListener {
-            if(item != null){
+            if (item != null) {
                 listener(item)
             }
         }
     }
 
-
-
-    }
+}

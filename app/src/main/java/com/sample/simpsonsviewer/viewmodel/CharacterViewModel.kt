@@ -10,17 +10,15 @@ import com.sample.simpsonsviewer.util.ApiState
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class CharacterViewModel : ViewModel () {
+class CharacterViewModel : ViewModel() {
     private val _characterState = MutableLiveData<ApiState<SimpsonsData>>()
     val characterState: LiveData<ApiState<SimpsonsData>>
+        get() = _characterState
 
-            get() = _characterState
-
-    fun makeCharacterFetch(show: String) {
+    fun makeCharacterFetch() {
         viewModelScope.launch {
-            CharacterRepo.getCharactersState(show)
+            CharacterRepo.getCharactersState()
                 .collect { characterState -> _characterState.postValue(characterState) }
-            
 
         }
     }
