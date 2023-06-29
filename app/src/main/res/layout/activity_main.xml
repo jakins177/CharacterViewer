@@ -7,7 +7,8 @@
     tools:context="com.sample.simpsonsviewer.view.MainActivity">
 
 
-    <androidx.fragment.app.FragmentContainerView
+<!--    <androidx.fragment.app.FragmentContainerView-->
+    <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
